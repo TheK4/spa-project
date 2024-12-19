@@ -1,0 +1,12 @@
+.about-container {
+    @apply flex flex-col items-center justify-center;
+  }
+  
+  .testimonials {
+    @apply mt-10 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+  }
+  
+  .testimonial {
+    @apply p-4 border rounded-lg shadow;
+  }
+  

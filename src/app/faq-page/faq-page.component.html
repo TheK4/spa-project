@@ -1,0 +1,21 @@
+<div class="p-10">
+    <h1 class="text-3xl font-bold mb-6">Perguntas Frequentes</h1>
+    <div class="faq-item border-b py-4" *ngFor="let item of faqList" appAutoAnimation>
+      <h2 
+        class="text-lg font-semibold cursor-pointer flex justify-between items-center"
+        (click)="toggleItem(item)"
+      >
+        {{ item.question }}
+        <span [class.rotate-180]="item.open" class="transition-transform duration-200">
+          ▼
+        </span>
+      </h2>
+      <p 
+        *ngIf="item.open"
+        class="text-gray-600 mt-2"
+      >
+        {{ item.answer }}
+      </p>
+    </div>
+  </div>
+  

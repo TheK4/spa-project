@@ -1,0 +1,22 @@
+<div class="register-container p-10" appAutoAnimation>
+    <h1 class="text-3xl font-bold text-center">Cadastro</h1>
+    <form class="mt-6 flex flex-col gap-4 max-w-md mx-auto">
+      <label>
+        <span class="block mb-2 text-sm font-medium">Nome</span>
+        <input type="text" class="w-full p-2 border rounded" placeholder="Digite seu nome" />
+      </label>
+      <label>
+        <span class="block mb-2 text-sm font-medium">E-mail</span>
+        <input type="email" class="w-full p-2 border rounded" placeholder="Digite seu e-mail" />
+      </label>
+      <label>
+        <span class="block mb-2 text-sm font-medium">Senha</span>
+        <input type="password" class="w-full p-2 border rounded" placeholder="Digite sua senha" />
+      </label>
+      <button class="w-full py-2 bg-green-500 text-white rounded hover:bg-green-600">Cadastrar</button>
+    </form>
+    <p class="text-center mt-4">
+      Já tem conta? <a class="text-green-500 underline cursor-pointer" routerLink="/login" (click)="navigateTo('/login')">Faça login</a>
+    </p>
+  </div>
+  
