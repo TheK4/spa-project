@@ -1,9 +1,12 @@
-<nav class="navigation mb-10 p-4 bg-gray-100">
-    <a class="mx-4 text-blue-500 underline cursor-pointer" routerLink="/" (click)="navigateTo('/')">Home</a>
-    <a class="mx-4 text-blue-500 underline cursor-pointer" routerLink="/sobre" (click)="navigateTo('/sobre')">Sobre</a>
-    <a class="mx-4 text-blue-500 underline cursor-pointer"  routerLink="/login" (click)="navigateTo('/login')">Login</a>
-    <a class="mx-4 text-blue-500 underline cursor-pointer" routerLink="/register" (click)="navigateTo('/register')">Cadastro</a>
-    <a class="mx-4 text-blue-500 underline cursor-pointer" routerLink="/register" (click)="navigateTo('/faq')">FAQ</a>
-</nav>
+<div class="flex mb-10 p-4 bg-gray-100 justify-between items-center">
+    <a class="mx-4 text-blue-500 cursor-pointer text-xl font-bold" routerLink="/" (click)="navigateTo('/')">Logo</a>
+    <nav class="navigation flex justify-between items-center ali first:">
+        <a class="mx-4 text-blue-500 underline cursor-pointer " routerLink="/" (click)="navigateTo('/')">Home</a>
+        <a class="mx-4 text-blue-500 underline cursor-pointer" routerLink="/sobre" (click)="navigateTo('/sobre')">Sobre</a>
+        <a class="mx-4 text-blue-500 underline cursor-pointer" routerLink="/faq" (click)="navigateTo('/faq')">FAQ</a>
+        <a class="mx-4 text-blue-500 underline cursor-pointer"  routerLink="/login" (click)="navigateTo('/login')">Login</a>
+        <a class="mx-4 text-blue-500 underline cursor-pointer" routerLink="/register" (click)="navigateTo('/register')">Cadastro</a>
+    </nav>
+</div>
 
 <router-outlet></router-outlet>
