@@ -1,0 +1,27 @@
+<div class="dashboard-container">
+    <h2 class="text-2xl font-bold mb-4">Progresso dos Vídeos</h2>
+  
+    <!-- Barra de progresso total -->
+    <div class="progress-bar-container mb-6">
+      <div class="progress-bar" [style.width.%]="totalProgress"></div>
+    </div>
+    <p class="text-lg">Progresso total: {{ totalProgress }}%</p>
+  
+    <!-- Lista de vídeos -->
+    <ul class="video-list mt-6">
+      <li *ngFor="let video of videos" class="video-item">
+        <h3 class="video-title">{{ video.title }}</h3>
+        <p class="video-status">
+          {{ formatTime(video.progress) }} / {{ formatTime(video.duration) }}
+          ({{ video.progress | calculatePercentage:video.duration }}%)
+        </p>
+        <div class="video-progress-bar-container">
+          <div
+            class="video-progress-bar"
+            [style.width.%]="(video.progress / video.duration) * 100"
+          ></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
