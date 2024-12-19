@@ -1,0 +1,19 @@
+<div class="tabs-container">
+    <!-- Navegação das Tabs -->
+    <ul class="tab-list flex border-b">
+      <li 
+        *ngFor="let tab of tabs; let i = index" 
+        (click)="setActiveTab(i)" 
+        [class.active]="activeTab === i"
+        class="cursor-pointer py-2 px-4 text-center hover:bg-gray-100"
+      >
+        {{ tab.title }}
+      </li>
+    </ul>
+  
+    <!-- Conteúdo da Tab Ativa -->
+    <div class="tab-content p-4 border">
+      {{ tabs[activeTab].content }}
+    </div>
+  </div>
+  

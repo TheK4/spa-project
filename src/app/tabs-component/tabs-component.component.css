@@ -1,0 +1,27 @@
+.tabs-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .tab-list {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .tab-list li {
+    flex: 1;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .tab-list li.active {
+    border-bottom-color: #3490dc; /* Azul padrão */
+    font-weight: bold;
+  }
+  
+  .tab-content {
+    background-color: #f9f9f9;
+    border-radius: 4px;
+  }
+  
